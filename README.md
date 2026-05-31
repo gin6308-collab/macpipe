@@ -123,6 +123,32 @@ http://127.0.0.1:8787/debug/health
 
 Debug action endpoints are also available under `/debug/actions/*` for tool-driven testing.
 
+## Using Claude Code
+
+Claude Code is optional, but this repo includes two Claude workflows for review and redesign loops.
+
+Use Claude as a shell tool:
+
+```bash
+scripts/claude_review_macpipe.sh
+scripts/claude_review_macpipe.sh "Review the duplicate-click VLC guard."
+```
+
+Use Claude as an interactive slash command:
+
+```bash
+claude
+/macpipe-redesign
+/macpipe-redesign tighten the observe page and setup docs
+```
+
+Details:
+
+```text
+docs/claude.md
+.claude/commands/macpipe-redesign.md
+```
+
 ## Design notes
 
 - No React, Vite, npm, or client-side app state.
